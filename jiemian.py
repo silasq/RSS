@@ -64,7 +64,7 @@ class RssSpider():
         soup=BeautifulSoup(rsp)
         #print soup.findALL('div',{'class':'m-main'})
         for ul in soup.find_all('item'):
-            link = ul.link
+            link = ul.guid.string
             print link
             html=self.enterpage(link)
             self.myrss.items.append(html)
