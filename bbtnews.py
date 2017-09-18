@@ -26,7 +26,7 @@ class RssSpider():
                                     lastBuildDate = datetime.datetime.now(),
                                     items=[]
                                     )
-        self.xmlpath=r'/var/www.html/bbtnews.xml'
+        self.xmlpath=r'/var/www/html/bbtnews.xml'
 
         self.baseurl="http://app.bbtnews.com.cn/rss.php?catid=2"
         #if os.path.isfile(self.xmlpath):
@@ -75,7 +75,7 @@ class RssSpider():
                     self.myrss.items.append(html)
     def SaveRssFile(self,filename):
         finallxml=self.myrss.to_xml(encoding='utf-8')
-        file=open(self.xmlpath,'w+')
+        file=open(self.xmlpath,'w')
         file.writelines(finallxml)
         file.close()
 
