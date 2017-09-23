@@ -70,7 +70,7 @@ class RssSpider():
             alink=li.find('a')
             if alink is not None:
                 link=alink.get('href')
-                print link
+                print datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S") + " : " + link
                 html=self.enterpage(link)
                 self.myrss.items.append(html)
     def SaveRssFile(self,filename):

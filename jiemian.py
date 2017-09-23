@@ -65,7 +65,7 @@ class RssSpider():
         #print soup.findALL('div',{'class':'m-main'})
         for ul in soup.find_all('item'):
             link = ul.guid.string
-            print link
+            print datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S") + " : " + link
             html=self.enterpage(link)
             self.myrss.items.append(html)
     def SaveRssFile(self,filename):
