@@ -54,7 +54,7 @@ class RssSpider():
         rss=PyRSS2Gen.RSSItem(
                               title=ititle,
                               link=url,
-                              description = str(div),
+                              description = str(div).replace('src="//img','src="http://img'),
                               pubDate = timestr
                               )
 
