@@ -5,12 +5,9 @@ from bs4 import BeautifulSoup
 import urllib2
 
 import datetime
-import time
 import PyRSS2Gen
-from email.Utils import formatdate
 import re
 import sys
-import os
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -51,10 +48,14 @@ class RssSpider():
             #print timestr
         ititle=soup.title.string
         div=soup.find('div',{'class':'bbs-content clearfix'})
+
+        pic_remove = re.compile('img src=.*original=|img original=.*src=')
+        des = pic_remove.sub('img src =', str(div))
+
         rss=PyRSS2Gen.RSSItem(
                               title=ititle,
                               link=url,
-                              description = str(div),
+                              description = des,
                               pubDate = timestr
                               )
 

@@ -19,7 +19,7 @@ sys.setdefaultencoding('utf-8')
 
 class RssSpider():
     def __init__(self):
-        self.myrss = PyRSS2Gen.RSS2(title='jiemian',
+        self.myrss = PyRSS2Gen.RSS2(title='界面',
                                     link='http://www.jiemian.com/',
                                     description=str(datetime.date.today()),
                                     pubDate=datetime.datetime.now(),
