@@ -50,7 +50,9 @@ class RssSpider():
         div=soup.find('div',{'class':'bbs-content clearfix'})
 
         pic_remove = re.compile('img src=.*original=|img original=.*src=')
-        des = pic_remove.sub('img src =', str(div))
+        des = str(div)
+        des = re.sub('src=\".*imgloading.gif\"','',des)
+        des = re.sub('original=', 'src=', des)
 
         rss=PyRSS2Gen.RSSItem(
                               title=ititle,
