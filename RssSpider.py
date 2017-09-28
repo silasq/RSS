@@ -61,6 +61,6 @@ class RssSpider:
 
     def SaveRssFile(self):
         finallxml=self.myrss.to_xml(encoding='utf-8')
-        file=open(self.xmlpath,'w+')
+        file=open(self.xmlpath,'w')
         file.writelines(finallxml)
         file.close()
