@@ -64,3 +64,7 @@ class RssSpider:
         file=open(self.xmlpath,'w')
         file.writelines(finallxml)
         file.close()
+
+    def add_link_head(self,head):
+        for i in range(0,len(self.itemlinks)):
+            self.itemlinks[i] = head + self.itemlinks[i]
