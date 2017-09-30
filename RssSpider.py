@@ -68,3 +68,7 @@ class RssSpider:
     def add_link_head(self,head):
         for i in range(0,len(self.itemlinks)):
             self.itemlinks[i] = head + self.itemlinks[i]
+
+    def replace(self, old, new):
+        for i in range(0,len(self.myrss.items)):
+            self.myrss.items[i].description = self.myrss.items[i].description.replace(old, new)
