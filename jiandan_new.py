@@ -11,4 +11,5 @@ if __name__ == '__main__':
     rssSpider.get_links('div', {'class': 'thumbs_b'}, 'a')
     rssSpider.enterpage('div', {'id': 'content'})
     rssSpider.replace('data-original="','src="http:')
+    rssSpider.replace('alt=".*"', '')
     rssSpider.SaveRssFile()
