@@ -10,6 +10,6 @@ if __name__ == '__main__':
     rssSpider.search_soup('div', {'id': 'listContent'})
     rssSpider.get_links('div', {'class': 'news_li'}, 'a')
     rssSpider.add_link_head('http://www.thepaper.cn/')
-    rssSpider.enterpage('div', {'class': 'newscontent'})
+    rssSpider.enterpage('div', {'class': 'news_txt'})
     rssSpider.replace('alt=""', '')
     rssSpider.SaveRssFile()
