@@ -1,5 +1,8 @@
 #!/bin/sh
 
+pip install bs4
+pip install PyRSS2Gen
+
 sed -i "/python \/root\/RSS\/.*.py/d" /var/spool/cron/root 
 
 echo "*/10 * * * * python /root/RSS/jiemian.py >> /var/log/rss_cron.log" >> /var/spool/cron/root
@@ -14,3 +17,6 @@ echo "*/10 * * * * python /root/RSS/blogchina_focus.py >> /var/log/rss_cron.log"
 echo "*/10 * * * * python /root/RSS/pengpai.py >> /var/log/rss_cron.log" >> /var/spool/cron/root
 
 crontab -u root /var/spool/cron/root
+
+
+yum -y install httpd
