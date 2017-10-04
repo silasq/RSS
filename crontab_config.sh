@@ -3,6 +3,9 @@
 pip install bs4
 pip install PyRSS2Gen
 
+echo "import sys" >> /usr/lib/python2.7/site-packages/sitecustomize.py
+echo "sys.setdefaultencoding('utf-8')" >> /usr/lib/python2.7/site-packages/sitecustomize.py
+
 sed -i "/python \/root\/RSS\/.*.py/d" /var/spool/cron/root 
 
 echo "*/10 * * * * python /root/RSS/jiemian.py >> /var/log/rss_cron.log" >> /var/spool/cron/root
