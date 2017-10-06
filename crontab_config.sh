@@ -23,7 +23,7 @@ echo "6 * * * * python /root/RSS/pengpai.py >> /var/log/rss_cron.log" >> /var/sp
 # 每天
 echo "0 0 * * * python /root/RSS/liangcang.py >> /var/log/rss_cron.log" >> /var/spool/cron/root
 echo "5 0 * * * python /root/RSS/v_movie.py >> /var/log/rss_cron.log" >> /var/spool/cron/root
-echo "10 0 * * * * python /root/RSS/jiandan_new.py >> /var/log/rss_cron.log" >> /var/spool/cron/root
+echo "10 0 * * * python /root/RSS/jiandan_new.py >> /var/log/rss_cron.log" >> /var/spool/cron/root
 echo "15 0 * * * python /root/RSS/blogchina_top.py >> /var/log/rss_cron.log" >> /var/spool/cron/root
 echo "20 0 * * * python /root/RSS/blogchina_focus.py >> /var/log/rss_cron.log" >> /var/spool/cron/root
 
