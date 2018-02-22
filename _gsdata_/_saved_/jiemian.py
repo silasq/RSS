@@ -19,22 +19,22 @@ sys.setdefaultencoding('utf-8')
 
 class RssSpider():
     def __init__(self):
-        self.myrss = PyRSS2Gen.RSS2(title='OSChina',
-                                    link='http://my.oschina.net',
+        self.myrss = PyRSS2Gen.RSS2(title='界面',
+                                    link='http://www.jiemian.com/',
                                     description=str(datetime.date.today()),
                                     pubDate=datetime.datetime.now(),
                                     lastBuildDate = datetime.datetime.now(),
                                     items=[]
                                     )
-        self.xmlpath=r'/var/www/html/oschina.xml'
+        self.xmlpath=r'/var/www/html/jiemian.xml'
 
-        self.baseurl="http://www.oschina.net/blog"
-        #if os.path.isfile(self.xmlpath):
-            #os.remove(self.xmlpath)
+        self.baseurl="https://a.jiemian.com/index.php?m=article&a=rss"
     def useragent(self,url):
-        i_headers = {"User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) \
-    AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36", \
-    "Referer": 'http://baidu.com/'}
+        #i_headers = {"User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) \
+    #AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36", \
+    #"Referer": 'http://baidu.com/'}
+        i_headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6)\
+         AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"}
         req = urllib2.Request(url, headers=i_headers)
         html = urllib2.urlopen(req).read()
         return html
@@ -50,11 +50,11 @@ class RssSpider():
             timestr=match.group()
             #print timestr
         ititle=soup.title.string
-        div=soup.find('div',{'class':'blog-body'})
+        div=soup.find('div',{'class':'article-main'})
         rss=PyRSS2Gen.RSSItem(
                               title=ititle,
                               link=url,
-                              description = str(div),
+                              description = str(div).replace('src="//img','src="http://img'),
                               pubDate = timestr
                               )
 
@@ -62,15 +62,12 @@ class RssSpider():
     def getcontent(self):
         rsp=self.useragent(self.baseurl)
         soup=BeautifulSoup(rsp)
-        ul=soup.find('div',{'id':'topsOfRecommend'})
-        #for li in ul.findAll('box-aw'):
-        for li in ul.findAll('div',{'class':'box-aw'}):
-            alink=li.find('a')
-            if alink is not None:
-                link=alink.get('href')
-                print datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S") + " : " + link
-                html=self.enterpage(link)
-                self.myrss.items.append(html)
+        #print soup.findALL('div',{'class':'m-main'})
+        for ul in soup.find_all('item'):
+            link = ul.guid.string
+            print datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S") + " : " + link
+            html=self.enterpage(link)
+            self.myrss.items.append(html)
     def SaveRssFile(self,filename):
         finallxml=self.myrss.to_xml(encoding='utf-8')
         file=open(self.xmlpath,'w')
@@ -82,4 +79,4 @@ class RssSpider():
 if __name__=='__main__':
     rssSpider=RssSpider()
     rssSpider.getcontent()
-    rssSpider.SaveRssFile('oschina.xml')
+    rssSpider.SaveRssFile('bbtnews.xml')

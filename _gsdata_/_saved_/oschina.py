@@ -26,7 +26,7 @@ class RssSpider():
                                     lastBuildDate = datetime.datetime.now(),
                                     items=[]
                                     )
-        self.xmlpath=r'/var/www/html/oschina.xml'
+        self.xmlpath=r'/var/www.html/oschina.xml'
 
         self.baseurl="http://www.oschina.net/blog"
         #if os.path.isfile(self.xmlpath):

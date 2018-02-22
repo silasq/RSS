@@ -10,5 +10,4 @@ if __name__ == '__main__':
     rssSpider.search_soup('div', {'class': 'news_toplist_left'})
     rssSpider.get_links('li', {'class': 'tit'}, 'a')
     rssSpider.enterpage('div',{'class': 'article'})
-    rssSpider.replace('alt=""', '')
     rssSpider.SaveRssFile()

@@ -1,0 +1,61 @@
+2017-10-11 11:43:54: -- Analysis Started by User
+2017-10-11 11:43:54: 左侧: State file does not exist: D:/Documents/GitHub/RSS/_gsdata_/_file_state_v4._gs
+2017-10-11 11:43:54: /.gitattributes: 冲突: 新文件有变化
+2017-10-11 11:43:54: /.gitignore: 冲突: 新文件有变化
+2017-10-11 11:43:54: /bbtnews.py: 冲突: 新文件有变化
+2017-10-11 11:43:54: /blogchina_focus.py: 冲突: 新文件有变化
+2017-10-11 11:43:54: /blogchina_top.py: 冲突: 新文件有变化
+2017-10-11 11:43:54: /jiandan.py: 冲突: 新文件有变化
+2017-10-11 11:43:54: /jiandan_new.py: 冲突: 新文件有变化
+2017-10-11 11:43:54: /jiemian.py: 冲突: 新文件有变化
+2017-10-11 11:43:54: /liangcang.py: 冲突: 新文件有变化
+2017-10-11 11:43:54: /main.py: 冲突: 新文件有变化
+2017-10-11 11:43:54: /oschina.py: 冲突: 新文件有变化
+2017-10-11 11:43:54: /RssSpider.py: 冲突: 新文件有变化
+2017-10-11 11:43:54: /RssSpider.pyc: 冲突: 新文件有变化
+2017-10-11 11:43:54: /tianya_gupiao.py: 冲突: 新文件有变化
+2017-10-11 11:43:54: /v_movie.py: 冲突: 新文件有变化
+2017-10-11 11:43:54: 分析完毕并发现冲突情况。如需解决冲突请选择正常的同步方向。
+2017-10-11 11:43:54: 变更：17， 冲突：15， 复制时间：， 复制状态：/， 错误： , All: 21
+2017-10-11 11:43:54: Right to Left: Copy File: 2 
+2017-10-11 11:43:54: ----- ：分析已结束。 历时 00:00:01， 速度： 21 个文件/秒 -----
+2017-10-11 11:43:54: 
+2017-10-11 11:44:35: === User Changed Action from 'CONFLICT' to 'COPY_RIGHT_TO_LEFT' on item /.gitattributes
+2017-10-11 11:44:35: Done.
+2017-10-11 11:45:15: === User Changed Action from 'CONFLICT' to 'COPY_RIGHT_TO_LEFT' on item /.gitattributes
+2017-10-11 11:45:15: === User Changed Action from 'CONFLICT' to 'COPY_RIGHT_TO_LEFT' on item /.gitignore
+2017-10-11 11:45:15: === User Changed Action from 'CONFLICT' to 'COPY_RIGHT_TO_LEFT' on item /bbtnews.py
+2017-10-11 11:45:15: === User Changed Action from 'CONFLICT' to 'COPY_RIGHT_TO_LEFT' on item /blogchina_focus.py
+2017-10-11 11:45:15: === User Changed Action from 'CONFLICT' to 'COPY_RIGHT_TO_LEFT' on item /blogchina_top.py
+2017-10-11 11:45:15: === User Changed Action from 'CONFLICT' to 'COPY_RIGHT_TO_LEFT' on item /jiandan.py
+2017-10-11 11:45:15: === User Changed Action from 'CONFLICT' to 'COPY_RIGHT_TO_LEFT' on item /jiandan_new.py
+2017-10-11 11:45:15: === User Changed Action from 'CONFLICT' to 'COPY_RIGHT_TO_LEFT' on item /jiemian.py
+2017-10-11 11:45:15: === User Changed Action from 'CONFLICT' to 'COPY_RIGHT_TO_LEFT' on item /liangcang.py
+2017-10-11 11:45:15: === User Changed Action from 'CONFLICT' to 'COPY_RIGHT_TO_LEFT' on item /main.py
+2017-10-11 11:45:15: === User Changed Action from 'CONFLICT' to 'COPY_RIGHT_TO_LEFT' on item /oschina.py
+2017-10-11 11:45:15: === User Changed Action from 'CONFLICT' to 'COPY_RIGHT_TO_LEFT' on item /RssSpider.py
+2017-10-11 11:45:15: === User Changed Action from 'CONFLICT' to 'COPY_RIGHT_TO_LEFT' on item /RssSpider.pyc
+2017-10-11 11:45:15: === User Changed Action from 'CONFLICT' to 'COPY_RIGHT_TO_LEFT' on item /tianya_gupiao.py
+2017-10-11 11:45:15: === User Changed Action from 'CONFLICT' to 'COPY_RIGHT_TO_LEFT' on item /v_movie.py
+2017-10-11 11:45:15: Done.
+2017-10-11 11:45:24: New _gsdata_ folder(s) created, so rescan all job folders for their ghosts
+2017-10-11 11:45:24: == Sync Started by User
+2017-10-11 11:45:25: 覆盖复制 'sftp://www.silasq.top/root/RSS/.gitattributes' -> 'D:/Documents/GitHub/RSS/.gitattributes' (User Action)
+2017-10-11 11:45:25: 覆盖复制 'sftp://www.silasq.top/root/RSS/.gitignore' -> 'D:/Documents/GitHub/RSS/.gitignore' (User Action)
+2017-10-11 11:45:25: 覆盖复制 'sftp://www.silasq.top/root/RSS/bbtnews.py' -> 'D:/Documents/GitHub/RSS/bbtnews.py' (User Action)
+2017-10-11 11:45:25: 覆盖复制 'sftp://www.silasq.top/root/RSS/blogchina_focus.py' -> 'D:/Documents/GitHub/RSS/blogchina_focus.py' (User Action)
+2017-10-11 11:45:26: 覆盖复制 'sftp://www.silasq.top/root/RSS/blogchina_top.py' -> 'D:/Documents/GitHub/RSS/blogchina_top.py' (User Action)
+2017-10-11 11:45:26: 新建复制 'sftp://www.silasq.top/root/RSS/crontab_config.sh' -> 'D:/Documents/GitHub/RSS/crontab_config.sh'
+2017-10-11 11:45:26: 覆盖复制 'sftp://www.silasq.top/root/RSS/jiandan.py' -> 'D:/Documents/GitHub/RSS/jiandan.py' (User Action)
+2017-10-11 11:45:26: 覆盖复制 'sftp://www.silasq.top/root/RSS/jiandan_new.py' -> 'D:/Documents/GitHub/RSS/jiandan_new.py' (User Action)
+2017-10-11 11:45:27: 覆盖复制 'sftp://www.silasq.top/root/RSS/jiemian.py' -> 'D:/Documents/GitHub/RSS/jiemian.py' (User Action)
+2017-10-11 11:45:27: 覆盖复制 'sftp://www.silasq.top/root/RSS/liangcang.py' -> 'D:/Documents/GitHub/RSS/liangcang.py' (User Action)
+2017-10-11 11:45:27: 覆盖复制 'sftp://www.silasq.top/root/RSS/main.py' -> 'D:/Documents/GitHub/RSS/main.py' (User Action)
+2017-10-11 11:45:28: 覆盖复制 'sftp://www.silasq.top/root/RSS/oschina.py' -> 'D:/Documents/GitHub/RSS/oschina.py' (User Action)
+2017-10-11 11:45:28: 新建复制 'sftp://www.silasq.top/root/RSS/pengpai.py' -> 'D:/Documents/GitHub/RSS/pengpai.py'
+2017-10-11 11:45:28: 覆盖复制 'sftp://www.silasq.top/root/RSS/RssSpider.py' -> 'D:/Documents/GitHub/RSS/RssSpider.py' (User Action)
+2017-10-11 11:45:28: 覆盖复制 'sftp://www.silasq.top/root/RSS/RssSpider.pyc' -> 'D:/Documents/GitHub/RSS/RssSpider.pyc' (User Action)
+2017-10-11 11:45:29: 覆盖复制 'sftp://www.silasq.top/root/RSS/tianya_gupiao.py' -> 'D:/Documents/GitHub/RSS/tianya_gupiao.py' (User Action)
+2017-10-11 11:45:29: 覆盖复制 'sftp://www.silasq.top/root/RSS/v_movie.py' -> 'D:/Documents/GitHub/RSS/v_movie.py' (User Action)
+2017-10-11 11:45:29: ===== ：同步完毕。时间：00:00:06，速度： 4.65 KB/s =====, 项目同步未必： 17，错误： 
+2017-10-11 11:45:29: 
