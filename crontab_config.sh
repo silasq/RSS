@@ -1,7 +1,14 @@
 #!/bin/sh
 
-pip install bs4
-pip install PyRSS2Gen
+
+if ! pip show bs4|grep -q "^Version" ;then
+    pip install bs4
+fi
+
+if ! pip show PyRSS2Gen|grep -q "^Version" ;then
+    pip install PyRSS2Gen
+fi
+
 
 # 配置全局utf-8编码
 if ! grep -q "^import sys" /usr/lib/python2.7/site-packages/sitecustomize.py ;then
@@ -19,6 +26,7 @@ echo "0 * * * * python /root/RSS/jiemian.py >> /var/log/rss_cron.log" >> /var/sp
 echo "2 * * * * python /root/RSS/oschina.py >> /var/log/rss_cron.log" >> /var/spool/cron/root
 echo "4 * * * * python /root/RSS/bbtnews.py >> /var/log/rss_cron.log" >> /var/spool/cron/root
 echo "6 * * * * python /root/RSS/pengpai.py >> /var/log/rss_cron.log" >> /var/spool/cron/root
+echo "8 * * * * python /root/RSS/diyicaijing.py >> /var/log/rss_cron.log" >> /var/spool/cron/root
 
 # 每天
 echo "0 0 * * * python /root/RSS/liangcang.py >> /var/log/rss_cron.log" >> /var/spool/cron/root
